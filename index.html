@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Галерея изображений</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <h1 class="page-header__title">Gallery Images</h1>
+        <a class="page-header__add-image" href="#" title="Добавить изображение в галерею">Добавить IMG</a>
+      </div>
+    </header>
+    <main>
+      <section class="images">
+        <h2 class="visually-hidden">Список изображений</h2>
+        <ul class="images__list"></ul>
+      </section>
+      <section class="popup-image  popup-image--hidden">
+        <div class="popup-image__description">
+          <h2 class="visually-hidden">Модульное окно изображения</h2>
+          <div class="popup-image__wrapper-img">
+            <img class="popup-image__img" src="https://avatars.mds.yandex.net/get-pdb/33827/bee3aef3-f52e-410f-a6b4-8a53e9dc51bc/s1200" alt="Выбранное изображение">
+          </div>
+          <div class="popup-image__wrapper-comment">
+            <div class="popup-image__edit-comment">
+              <p class="popup-image__comment">Комментарий</p>
+              <div class="popup-image__wrapper-commentfield">
+                <textarea class="popup-image__commentfield"></textarea>
+                <span class="popup-image__commentfield-nosave">Сохраните комментарий</span>
+              </div>
+              <button class="popup-image__button-edit">Изменить</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="popup-add-image  popup-add-image--hidden">
+        <div class="popup-add-image__description">
+          <h2 class="popup-add-image__title">Добавить изображение</h2>
+          <form class="popup-add-image__form" name="form">
+            <div class="popup-add-image__wrapper">
+              <label class="popup-add-image__label">
+                Url изображения:
+                <input class="popup-add-image__input" type="text" name="url">
+              </label>
+              <span class="popup-add-image__error"></span>
+            </div>
+            <div class="popup-add-image__wrapper">
+              <label class="popup-add-image__label">
+                Комментарий:
+                <input class="popup-add-image__input" type="text" name="comment">
+              </label>
+              <span class="popup-add-image__error"></span>
+            </div>
+            <button class="popup-add-image__btn" type="submit">Добавить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <p class="page-footer__copyright">© 2018</p>
+        <p class="page-footer__develop">Разработано: Александр Самсонов</p>
+      </div>
+    </footer>
+    <!-- Шаблон по которому создаются превью-картинок -->
+    <ul class="template-images-list">
+      <li class="images__item">
+        <a class="images__img" href="#">
+          <p class="images__comment">К</p>
+        </a>
+      </li>
+    </ul>
+
+    <script src="js/image-data.js"></script>
+    <script src="js/image-base.js"></script>
+    <script src="js/image-preview.js"></script>
+    <script src="js/popup-image.js"></script>
+    <script src="js/images-gallery.js"></script>
+    <script src="js/validate.js"></script>
+  </body>
+</html>
